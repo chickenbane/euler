@@ -1,4 +1,4 @@
-package euler001
+package euler00x
 
 import org.junit.Assert
 import org.junit.Test

@@ -1,4 +1,4 @@
-package euler001
+package euler00x
 
 import java.util.*
 
@@ -14,6 +14,8 @@ fun Int.isMultiple3or5(): Boolean {
     return (this % 3 == 0) || (this % 5 == 0)
 }
 
+// Is there no way to get an IntRange to a List<Int>
+// Doing listOf(1..10) returns a List<IntRange>, lols
 fun naturalsBelow(n: Int): List<Int> {
     var i = 0
     val list = ArrayList<Int>()
@@ -24,8 +26,8 @@ fun naturalsBelow(n: Int): List<Int> {
     return list
 }
 
-val answer = naturalsBelow(1000).filter { it.isMultiple3or5() }.sum()
+val answer001 = naturalsBelow(1000).filter { it.isMultiple3or5() }.sum()
 
 fun main(args: Array<String>) {
-    println("my answer = $answer")
+    println("my answer = $answer001")
 }
