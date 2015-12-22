@@ -8,9 +8,16 @@ package euler001
 
 class Euler001 {
 
+    //fun Int.IsMultiple3or5(): Boolean = (this % 3 == 0) || (this % 5 == 0)
+
 }
 
-fun Int.canDivideBy3or5(): Boolean = (this % 3 == 0) || (this % 5 == 0)
+fun Int.isMultiple3or5(): Boolean = (this % 3 == 0) || (this % 5 == 0)
+
+fun herro(name: String) {
+    println("oh hai $name")
+}
+
 
 fun main(args: Array<String>) {
     //println("euler 001")
