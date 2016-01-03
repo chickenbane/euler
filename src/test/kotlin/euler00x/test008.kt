@@ -39,4 +39,16 @@ class Euler008Test {
     @Test fun checkAnswer() {
         Assert.assertEquals("findMaxProductFoLength(13) = 23514624000", 23514624000, Euler008.findMaxProductForLength(13))
     }
+
+    @Test
+    fun checkCharToInt() {
+        // Good to know!
+        Assert.assertFalse("7 is not '7'.toInt", 7.equals('7'.toInt()))
+    }
+
+    @Test
+    fun checkStrToInt() {
+        Assert.assertEquals("7 is \"7\".toInt", 7, "7".toInt())
+        Assert.assertEquals("'7'.toString().toInt() = 7", 7, '7'.toString().toInt())
+    }
 }
