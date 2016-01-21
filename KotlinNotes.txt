@@ -5,3 +5,6 @@
 16 number -> string -> List<Char> -> List<Int>: char.toInt() doesn't do what you want
 17 build an arrayList with .apply { }
 18 stringTo2dArray(), companion object for 67
+19 enum classes
+
+67 wanted to read the file by name in classpath, this was the easiest way
