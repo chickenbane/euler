@@ -1,0 +1,7 @@
+10 prime numbers
+11 .run { }, by lazy delegates, IntArray() { } builder, 2d array
+14 good things to know about comparing IntArray
+15 overflowed a long! factorial, P(n,k) C(n,k).
+16 number -> string -> List<Char> -> List<Int>: char.toInt() doesn't do what you want
+17 build an arrayList with .apply { }
+18 stringTo2dArray(), companion object for 67
