@@ -1,6 +1,7 @@
 package common
 
 import euler01x.Euler010
+import euler01x.Euler012
 import java.util.*
 
 /**
@@ -30,6 +31,7 @@ object Prime {
 
     // returns the prime factors of x
     // from euler005, which was a rewrite of euler003
+    // factorize(12) == listOf(2, 2, 3)
     fun factorize(x: Int): List<Int> = euler00x.factorize(x)
 
     // returns the nth prime.  findPrime(1) = 2
@@ -43,4 +45,8 @@ object Prime {
     // ArrayList of the primes from 1 to n
     // from Euler010
     fun findPrimesLessThan(lessThan: Int): ArrayList<Int> = Euler010.findPrimesLessThan(lessThan)
+
+    // divisors(28) == setOf(1,2,4,7,14,28)
+    // from Euler012
+    fun divisors(n: Int): Set<Int> = Euler012.divisors(n)
 }

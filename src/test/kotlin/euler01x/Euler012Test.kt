@@ -1,6 +1,7 @@
 package euler01x
 
 
+import common.Prime
 import org.junit.Assert
 import org.junit.Test
 
@@ -34,18 +35,26 @@ class Euler012Test {
     //    28: 1,2,4,7,14,28
     @Test
     fun checkDivisors() {
-        Assert.assertEquals("divisorTriangle(1)", setOf(1), Euler012.divisors(Euler012.triangleNum(1)))
-        Assert.assertEquals("divisorTriangle(2)", setOf(1,3), Euler012.divisors(Euler012.triangleNum(2)))
-        Assert.assertEquals("divisorTriangle(3)", setOf(1,2,3,6), Euler012.divisors(Euler012.triangleNum(3)))
-        Assert.assertEquals("divisorTriangle(4)", setOf(1,2,5,10), Euler012.divisors(Euler012.triangleNum(4)))
-        Assert.assertEquals("divisorTriangle(5)", setOf(1,3,5,15), Euler012.divisors(Euler012.triangleNum(5)))
-        Assert.assertEquals("divisorTriangle(6)", setOf(1,3,7,21), Euler012.divisors(Euler012.triangleNum(6)))
-        Assert.assertEquals("divisorTriangle(7)", setOf(1,2,4,7,14,28), Euler012.divisors(Euler012.triangleNum(7)))
+        Assert.assertEquals("divisorTriangle(1) = divisors(1)", setOf(1), Euler012.divisors(Euler012.triangleNum(1)))
+        Assert.assertEquals("divisorTriangle(2) = divisors(3)", setOf(1,3), Euler012.divisors(Euler012.triangleNum(2)))
+        Assert.assertEquals("divisorTriangle(3) = divisors(6)", setOf(1,2,3,6), Euler012.divisors(Euler012.triangleNum(3)))
+        Assert.assertEquals("divisorTriangle(4) = divisors(10)", setOf(1,2,5,10), Euler012.divisors(Euler012.triangleNum(4)))
+        Assert.assertEquals("divisorTriangle(5) = divisors(15)", setOf(1,3,5,15), Euler012.divisors(Euler012.triangleNum(5)))
+        Assert.assertEquals("divisorTriangle(6) = divisors(21)", setOf(1,3,7,21), Euler012.divisors(Euler012.triangleNum(6)))
+        Assert.assertEquals("divisorTriangle(7) = divisors(28)", setOf(1,2,4,7,14,28), Euler012.divisors(Euler012.triangleNum(7)))
     }
 
+    // this takes a little while to complete, on the order of >1minute
     @Test
     fun answer() {
         Assert.assertEquals(76576500, Euler012.answer())
+    }
+
+    @Test
+    fun testDivisors() {
+        val expected = setOf(1, 2, 4, 7, 14, 28)
+        val actual = Prime.divisors(28)
+        Assert.assertEquals("divisors of 28 = setOf(1,2,4,7,14,28)", expected, actual)
     }
 
 }

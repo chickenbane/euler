@@ -1,6 +1,6 @@
 8 char.toInt, again in 16
 10 prime numbers
-11 .run { }, by lazy delegates, IntArray() { } builder, 2d array
+11 .run { }, by lazy delegates, IntArray() { } builder, 2d array, wanted to reuse a habit from scala to flatMap(Option) but learned to love filterNotNull
 14 good things to know about comparing IntArray
 15 overflowed a long! factorial, P(n,k) C(n,k).
 16 number -> string -> List<Char> -> List<Int>: char.toInt() doesn't do what you want
@@ -8,5 +8,6 @@
 18 stringTo2dArray(), companion object for 67
 19 enum classes, you can't put them in the Euler object and import them
 20 sum of digits again, now reusable
+21 find divisors
 
 67 wanted to read the file by name in classpath, this was the easiest way

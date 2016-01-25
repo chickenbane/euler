@@ -1,5 +1,6 @@
 package euler00x
 
+import common.Prime
 import org.junit.Assert
 import org.junit.Test
 
@@ -19,5 +20,18 @@ class Euler005 {
         Assert.assertEquals("smallestMultiple(7) = 420", 420, smallestMultiple(7))
         Assert.assertEquals("smallestMultiple(8) = 840", 840, smallestMultiple(8))
         Assert.assertEquals("smallestMultiple(9) = 2520", 2520, smallestMultiple(9))
+    }
+
+    @Test
+    fun testFactorize12() {
+        // factorize finds all prime factors of a number.  so, for 12 = 4 * 3 = 2 * 2 * 3 = listOf(2, 2, 3)
+        val expected = listOf(2, 2, 3)
+        val actual = Prime.factorize(12)
+        Assert.assertEquals("factors of 12", expected, actual)
+
+        // so, to find prime factors of 12, do Prime.factorize(12).toSet()
+        val expectedPrimeFactors = setOf(2, 3)
+        val actualPrimeFactors = Prime.factorize(12).toSet()
+        Assert.assertEquals("prime factors of 12", expectedPrimeFactors, actualPrimeFactors)
     }
 }
