@@ -51,7 +51,14 @@ traverse allDn to find pairs. then sum!
             val x = sumOfProperDivisors(b)
             // a != b
             if (a != b) {
+                // d(b) == x == a, d(a) == b
+                // isAmicablePair(a, b)
+                // isAmicablePair(x, b)
                 if (x == a) {
+                    require(isAmicablePair(a, b))
+                    require(isAmicablePair(x, b))
+                    require(!isAmicablePair(a, x))
+                    require(x == a)
                     set.add(a)
                     set.add(b)
                 }
