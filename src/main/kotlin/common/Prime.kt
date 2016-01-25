@@ -34,6 +34,9 @@ object Prime {
     // factorize(12) == listOf(2, 2, 3)
     fun factorize(x: Int): List<Int> = euler00x.factorize(x)
 
+    // primeFactors(12) = setOf(2, 3)
+    fun primeFactors(x: Int): Set<Int> = factorize(x).toSet()
+
     // returns the nth prime.  findPrime(1) = 2
     // from euler007
     fun findPrime(nth: Int): Int = euler00x.findPrime(nth)
@@ -49,4 +52,10 @@ object Prime {
     // divisors(28) == setOf(1,2,4,7,14,28)
     // from Euler012
     fun divisors(n: Int): Set<Int> = Euler012.divisors(n)
+
+    // proper divisors of n (numbers less than n which divide evenly into n).
+    // properDivisors(28) == setOf(1, 2, 4, 7, 14)
+    // Prime.properDivisors(220) == setOf(1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110)
+    // from Euler021
+    fun properDivisors(n: Int): Set<Int> = divisors(n).filter { it != n }.toSet()
 }

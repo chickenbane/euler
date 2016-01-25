@@ -1,5 +1,8 @@
 package euler02x
 
+import common.Prime
+import java.util.*
+
 /**
  * Created by joeyt on 1/23/16.
  */
@@ -21,9 +24,40 @@ go through old problems to find
 
 then
     fun d(n) = properDivsors(n).sum
-    val allDn[1..100000] = d(i)
+    val allDn[1..10000] = d(i)
 
-traverse allDn to find pairs. then smu!
+traverse allDn to find pairs. then sum!
 """
+
+    fun sumOfProperDivisors(n: Int): Int = Prime.properDivisors(n).sum()
+
+    fun isAmicablePair(a: Int, b: Int): Boolean = sumOfProperDivisors(a) == b && sumOfProperDivisors(b) == a
+
+    val tenThou = 10000
+
+    // gotcha!  using the IntArray(n) { lambda } constructor means your lambda must anticipate being called with zero
+    val allDn: IntArray by lazy { IntArray(tenThou){ if (it == 0) 0 else sumOfProperDivisors(it) } }
+
+    val allAmicableNums: Set<Int> by lazy {
+        val set = HashSet<Int>()
+        for (a in 1..tenThou) {
+            // d(a) = b
+            val b = sumOfProperDivisors(a)
+            // don't allow b == 0
+            if (b == 0) {
+                continue
+            }
+            // d(b) = x
+            val x = sumOfProperDivisors(b)
+            // a != b
+            if (a != b) {
+                if (x == a) {
+                    set.add(a)
+                    set.add(b)
+                }
+            }
+        }
+        set
+    }
 
 }
