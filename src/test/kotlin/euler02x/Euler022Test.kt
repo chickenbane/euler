@@ -23,7 +23,7 @@ class Euler022Test {
         val expected = listOf("AARON", "ABBEY", "ABBIE", "ABBY", "ABDUL", "ABE", "ABEL", "ABIGAIL", "ABRAHAM", "ABRAM")
         val first10NamesSorted = Euler022.firstNamesSorted.subList(0, 10)
         println("firstNamesSorted=$first10NamesSorted")
-        Assert.assertEquals("first ten names == listOf()", expected, first10NamesSorted)
+        Assert.assertEquals("first ten names == listOf(AARON, ABBEY, ABBIE, ABBY, ABDUL, ABE, ABEL, ABIGAIL, ABRAHAM, ABRAM)", expected, first10NamesSorted)
 
         // For example, when the list is sorted into alphabetical order,
         // COLIN [...] is the 938th name in the list.
