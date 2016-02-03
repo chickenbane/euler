@@ -14,5 +14,6 @@
 21 find divisors, so reuse #12, gotcha using IntArray(n) { lambda } constructor
 22 reading a file, char[] alphabet, sliceArray(0..5).size == 6, List<Int?> to List<Int> via filterNotNull()
 23 "naked" when expression
+24 lexicographic permutations
 
 67 wanted to read the file by name in classpath, this was the easiest way
