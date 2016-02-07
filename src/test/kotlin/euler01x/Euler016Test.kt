@@ -26,7 +26,7 @@ class Euler016Test {
     fun warnStringToListOfInts() {
         val powString = Euler016.powString(2, 15)
         println("powString(2, 15)=$powString")
-        val arraylist = powString.toArrayList()
+        val arraylist = powString.toCollection(arrayListOf<Char>())
         println("powString.toArrayList=" + arraylist)
         val listToInt = arraylist.map { it.toInt() }
         val listToStringToInt = arraylist.map { it.toString().toInt() }

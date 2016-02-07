@@ -34,7 +34,7 @@ this space to do file io
 
     fun fileTo2dArray(inputFilename: String): Array<IntArray> {
         val lines = File(inputFilename).readLines()
-        val list = lines.filter { it.isNotBlank() }.toArrayList()
+        val list = lines.filter { it.isNotBlank() }.toCollection(arrayListOf<String>())
 
         // ArrayList<String> to Array<IntArray>
         return Array(list.size) {

@@ -23,8 +23,8 @@ let's hope I don't overflow bigdecimal!
 
     // v1.  UGH, because string.toArrayList() returns a list<Char>, and as we saw earlier char.toInt() doesn't do what we want.
     // I THOUGHT I ALREADY LEARNED THIS, bleh.
-    fun sumOfDigits(base: Int, pow: Int) = BigDecimal(base).pow(pow).toString().toArrayList().map { it.toInt() }.sum()
+    fun sumOfDigits(base: Int, pow: Int) = BigDecimal(base).pow(pow).toString().toCollection(arrayListOf<Char>()).map { it.toInt() }.sum()
 
-    fun sumOfDigitsV2(base: Int, pow: Int) = BigDecimal(base).pow(pow).toString().toArrayList().map { it.toString().toInt() }.sum()
+    fun sumOfDigitsV2(base: Int, pow: Int) = BigDecimal(base).pow(pow).toString().toCollection(arrayListOf<Char>()).map { it.toString().toInt() }.sum()
 
 }

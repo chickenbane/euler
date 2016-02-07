@@ -22,7 +22,7 @@ combine problem 15 and 16, maybe make something reusable? lol
 
     fun sumOfDigits(stringOfDigits: String): Int {
         require(stringOfDigits.all { it.isDigit() })
-        return stringOfDigits.toArrayList().map { it.toString().toInt() }.sum()
+        return stringOfDigits.toCollection(arrayListOf<Char>()).map { it.toString().toInt() }.sum()
     }
 
     fun sumOfFactorial(number: Int): Int {

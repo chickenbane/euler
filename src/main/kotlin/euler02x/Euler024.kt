@@ -80,7 +80,7 @@ oh whoops, reusing my digits.  think i got the formula down
 
     val answer by lazy {
         val dst = ArrayList<Int>()
-        val src = digits.toArrayList()
+        val src = digits.toCollection(arrayListOf<Int>())
         var end = mil
         while (src.isNotEmpty()) {
             println("src=$src")

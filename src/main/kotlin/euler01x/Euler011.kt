@@ -66,7 +66,7 @@ What is the greatest product of four adjacent numbers in the same direction (up,
     val numArray = grid.split(' ', '\n').filterNot { it.isBlank() }.map { it.trim().toInt() }.toIntArray()
 
     val num2dArray = run {
-        val list = grid.lineSequence().filter { it.isNotBlank() }.toArrayList()
+        val list = grid.lineSequence().filter { it.isNotBlank() }.toCollection(arrayListOf<String>())
         Array(list.size) {
             list[it].split(' ').map { it.trim().toInt() }.toIntArray()
         }

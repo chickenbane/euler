@@ -75,5 +75,5 @@ an arraylist(1000) doesn't sound unreasonable, right?
     }
 
     // Note, don't generalize this, counting on the fact they're all lower lol
-    fun String.countLetters(): Int = toArrayList().filter { it.isLowerCase() }.size
+    fun String.countLetters(): Int = toCollection(arrayListOf<Char>()).filter { it.isLowerCase() }.size
 }

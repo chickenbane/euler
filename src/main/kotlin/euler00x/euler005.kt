@@ -98,7 +98,7 @@ fun smallestMultiple(n: Int): Int {
 // kotlin helpers like .intersect() aren't helpful because they convert to Sets, which don't allow dupes
 // list1.removePresent(list2) will return list1 elements that do not exist in list2, but also counts duplicates
 fun List<Int>.removePresent(primes: ArrayList<Int>): List<Int> {
-    val check = primes.toArrayList()  // copy primes, we don't want to change list passed in
+    val check = primes.toCollection(arrayListOf<Int>())  // copy primes, we don't want to change list passed in
     return this.filter { check.notFound(it) }
 }
 

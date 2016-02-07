@@ -58,7 +58,7 @@ at the end, just choose max.
     // from problem 11
     fun stringTo2dArray(input: String): Array<IntArray> {
         // string to ArrayList<String>
-        val list = input.lineSequence().filter { it.isNotBlank() }.toArrayList()
+        val list = input.lineSequence().filter { it.isNotBlank() }.toCollection(arrayListOf<String>())
 
         // ArrayList<String> to Array<IntArray>
         return Array(list.size) {
