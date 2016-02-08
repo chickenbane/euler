@@ -34,4 +34,6 @@
 
 26 substringAfter behavior .run {} vs .apply {} Collections.binarySearch data structures suffix tree trie
 
+27 first-order functions
+
 67 wanted to read the file by name in classpath, this was the easiest way

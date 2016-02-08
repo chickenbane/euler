@@ -32,7 +32,13 @@ object Prime {
     // returns the prime factors of x
     // from euler005, which was a rewrite of euler003
     // factorize(12) == listOf(2, 2, 3)
-    fun factorize(x: Int): List<Int> = euler00x.factorize(x)
+    fun factorize(x: Int): List<Int> {
+        require(x > 0) { "can't factorize x=$x"}
+        return euler00x.factorize(x)
+    }
+
+    // from euler027
+    fun isPrime(x: Int): Boolean = if (x <= 0) false else factorize(x) == listOf(x)
 
     // primeFactors(12) = setOf(2, 3)
     fun primeFactors(x: Int): Set<Int> = factorize(x).toSet()
