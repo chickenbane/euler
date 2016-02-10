@@ -1,5 +1,7 @@
 package common
 
+import euler02x.Euler024
+
 /**
  * Created by joeyt on 2/8/16.
  */
@@ -11,4 +13,7 @@ object Numbers {
 
     // perhaps a funny method, but useful
     fun int2intArray(i: Int) = str2intArray(i.toString())
+
+    // from 24 and wikipedia
+    fun nextLexPermutation(ia: IntArray): Boolean = Euler024.nextLexPermutation(ia)
 }
