@@ -1,6 +1,10 @@
 package common
 
+import euler01x.Euler015
 import euler02x.Euler024
+import euler03x.Euler033.Rational
+import java.math.BigDecimal
+import java.math.BigInteger
 
 /**
  * Created by joeyt on 2/8/16.
@@ -16,4 +20,13 @@ object Numbers {
 
     // from 24 and wikipedia
     fun nextLexPermutation(ia: IntArray): Boolean = Euler024.nextLexPermutation(ia)
+
+    // rewritten because BigInt makes more sense
+    // from euler015
+    fun factorial(x: Int): BigInteger = (x downTo 1L).map { BigInteger.valueOf(it) }.fold(BigInteger.ONE) { acc, n -> acc * n }
+
+    fun permutations(total: Int, items: Int): BigDecimal = Euler015.permutations(total, items)
+    fun combinations(total: Int, items: Int): BigDecimal = Euler015.combinations(total, items)
+
+    fun rational(num: Int, den: Int): Rational = Rational(num, den)
 }

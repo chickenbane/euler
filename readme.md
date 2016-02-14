@@ -36,6 +36,6 @@
 
 27 first-order functions
 
-33 Rational class extension function times operator overloading fold
+33 Rational class extension function times operator overloading fold companion object
 
 67 wanted to read the file by name in classpath, this was the easiest way
