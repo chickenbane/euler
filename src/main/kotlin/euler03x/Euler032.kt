@@ -20,7 +20,7 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
     private val initialThoughts = """
     98 * 76 = 7448, so both numbers can't be two digits (only 8 characters)
     123 * 456 = 56088, so both numbers can't be three digits (11 characters)
-    9 * 876 = 7884 976 * 8 = 7808, so 1 digit * 4 digits won't work
+    9 * 876 = 7884 976 * 8 = 7808, so 1 digit * 3 digits won't work
     1234 * 5 = 6170 OK
 
     so must be 2 digit * 3 digits and 1 digit * 4 digits
