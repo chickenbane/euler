@@ -38,4 +38,6 @@
 
 33 Rational class extension function times operator overloading fold companion object
 
+35 6 Int3Progression.filter ex: (0..100).filter{ it.isDouble }
+
 67 wanted to read the file by name in classpath, this was the easiest way
