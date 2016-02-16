@@ -18,6 +18,8 @@ object Numbers {
     // perhaps a funny method, but useful
     fun int2intArray(i: Int) = str2intArray(i.toString())
 
+    fun intArray2int(arr: IntArray) = arr.joinToString("").toInt()
+
     // from 24 and wikipedia
     fun nextLexPermutation(ia: IntArray): Boolean = Euler024.nextLexPermutation(ia)
 

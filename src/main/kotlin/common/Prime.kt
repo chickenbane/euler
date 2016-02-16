@@ -38,7 +38,16 @@ object Prime {
     }
 
     // from euler027
-    fun isPrime(x: Int): Boolean = if (x <= 0) false else factorize(x) == listOf(x)
+    //fun isPrime(x: Int): Boolean = if (x <= 0) false else factorize(x) == listOf(x)
+
+    // isPrime() is frequently called in loops so here's a version that creates no objects
+    fun isPrime(x: Int): Boolean {
+        if (x <= 1) return false
+        if (x == 2) return true
+        val sqrt: Double = Math.sqrt(x.toDouble())
+        val ceil = Math.ceil(sqrt).toInt()
+        return (2..ceil).none { x % it == 0 }
+    }
 
     // primeFactors(12) = setOf(2, 3)
     fun primeFactors(x: Int): Set<Int> = factorize(x).toSet()
