@@ -15,51 +15,6 @@ If p is the perimeter of a right angle triangle with integral length sides, {a,b
 
 For which value of p ≤ 1000, is the number of solutions maximised?
 """
-    private val initialThoughts = """
-   I should write a stars and bars class for reuse.  unlike the lexiographic sequence thing this one should probably be recursive?
-"""
-
-    class StarsAndBars(val total: Int, val buckets: Int) : Iterator<IntArray> {
-        // a write-only IntArray returned by next, though this is still not thread safe
-        // callers shouldn't mess with it, but even if they did this class will never read from it
-        private val array by lazy { IntArray(buckets) }
-
-        private val list = LinkedList<Int>()
-        private val next = LinkedList<Int>().apply {
-            for (i in array.indices) {
-                val amt = if (i == array.lastIndex) total - buckets + 1 else 1
-                add(amt)
-            }
-            require(sum() == total && size == buckets)
-        }
-
-        override fun hasNext(): Boolean {
-            throw UnsupportedOperationException()
-        }
-
-        // would probably be safer to just copy the array
-        override fun next(): IntArray {
-            require(list.isEmpty() && next.size == buckets)
-            while (list.sum() < total) {
-                val amt = if (list.size == buckets - 1) // last bucket
-                    total - list.sum()
-                else
-                    1
-                list.add(amt)
-            }
-
-            require(list.size == buckets)
-            for (i in array.indices) {
-                val v = list.remove()
-                array[i] = v
-                next.add(v)
-            }
-            require(list.isEmpty() && next.size == buckets)
-
-            return array
-            // throw NoSuchElementException
-        }
-    }
 
     // advantages over Triple<Int, Int, Int>
     // 1: Don't want to type Triple<Int, Int, Int>
