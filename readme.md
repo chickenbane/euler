@@ -42,4 +42,8 @@
 
 36 same as 35, plus Integer.toString(x, 2) to get x in base2
 
+37 rewrote Prime.isPrime
+
+39 object subclass override contains
+
 67 wanted to read the file by name in classpath, this was the easiest way

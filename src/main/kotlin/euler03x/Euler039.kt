@@ -33,15 +33,26 @@ For which value of p ≤ 1000, is the number of solutions maximised?
     data class RightTriangle(val a: Int, val b: Int, val c: Int)
 
     fun findSolutions2(perimeter: Int): Set<RightTriangle> {
-        val set = LinkedHashSet<RightTriangle>()
+
+        val set = object : LinkedHashSet<RightTriangle>() {
+            // overriding contains in this way means that solutions returned will allow
+            // RightTriangle(4, 3, 5) in setOf(RightTriangle(3,4,5)
+            override fun contains(element: RightTriangle): Boolean {
+                if (super.contains(element)) return true
+                val bac = RightTriangle(element.b, element.a, element.c)
+                return super.contains(bac)
+            }
+        }
         for (a in 1..perimeter - 1) {
             for (b in 1..perimeter - 1) {
                 val c = perimeter - a - b
                 val right = (a*a + b*b) == c*c
                 if (!right) continue
                 val abc = RightTriangle(a, b, c)
-                val bac = RightTriangle(b, a, c)
-                if (abc !in set && bac !in set) set.add(abc)
+                // this works because we rewrote contains() above
+                if (abc !in set) set.add(RightTriangle(a, b, c))
+                // however, the check must still be present.  the set will still add RightTriangle(b,a,c)
+                // guessing i need to override hashCode() as well for that.
             }
         }
         return set

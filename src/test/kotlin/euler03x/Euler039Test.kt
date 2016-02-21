@@ -20,6 +20,10 @@ class Euler039Test {
 
         val tri345 = Euler039.RightTriangle(30, 40, 50)
         Assert.assertTrue("{30, 40, 50} a solution for p = 120", tri345 in ex)
+
+        val tri435 = Euler039.RightTriangle(40, 30, 50)
+        Assert.assertTrue("{40, 30, 50} a solution for p = 120", tri435 in ex)
+
     }
 
     @Test

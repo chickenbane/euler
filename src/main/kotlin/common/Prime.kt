@@ -40,6 +40,7 @@ object Prime {
     // from euler027
     //fun isPrime(x: Int): Boolean = if (x <= 0) false else factorize(x) == listOf(x)
 
+    // rewritten euler037
     // isPrime() is frequently called in loops so here's a version that creates no objects
     fun isPrime(x: Int): Boolean {
         if (x <= 1) return false
