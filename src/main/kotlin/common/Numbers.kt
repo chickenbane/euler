@@ -3,6 +3,8 @@ package common
 import euler01x.Euler015
 import euler02x.Euler024
 import euler03x.Euler033.Rational
+import euler03x.Euler038
+import euler04x.Euler041
 import java.math.BigDecimal
 import java.math.BigInteger
 
@@ -31,4 +33,10 @@ object Numbers {
     fun combinations(total: Int, items: Int): BigDecimal = Euler015.combinations(total, items)
 
     fun rational(num: Int, den: Int): Rational = Rational(num, den)
+
+    // from euler038, 32, 41
+    fun isPandigital(num: String): Boolean = Euler041.isPandigital(num)
+
+
+
 }
