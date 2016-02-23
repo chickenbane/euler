@@ -1,7 +1,7 @@
 package euler03x
 
 import common.Numbers
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -46,6 +46,6 @@ How many circular primes are there below one million?
         return joinToString("").toInt()
     }
 
-    fun isCircularPrime(x: Int): Boolean = rotations(x).all { Prime.isPrime(it) }
+    fun isCircularPrime(x: Int): Boolean = rotations(x).all { PrimeV1.isPrime(it) }
 }
 

@@ -1,6 +1,6 @@
 package euler02x
 
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -29,7 +29,7 @@ then
 traverse allDn to find pairs. then sum!
 """
 
-    fun sumOfProperDivisors(n: Int): Int = Prime.properDivisors(n).sum()
+    fun sumOfProperDivisors(n: Int): Int = PrimeV1.properDivisors(n).sum()
 
     fun isAmicablePair(a: Int, b: Int): Boolean = sumOfProperDivisors(a) == b && sumOfProperDivisors(b) == a
 

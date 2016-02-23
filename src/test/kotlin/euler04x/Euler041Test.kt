@@ -1,7 +1,7 @@
 package euler04x
 
 
-import common.Prime
+import common.PrimeV1
 import org.junit.Assert
 import org.junit.Test
 
@@ -14,7 +14,7 @@ class Euler041Test {
         Assert.assertEquals("Digits[0] == empty", emptySet<Int>(), Euler041.Digits[0])
         // 2143 is a 4-digit pandigital and is also prime
         Assert.assertTrue("2143 pandigital", Euler041.isPandigital("2143"))
-        Assert.assertTrue("2143 prime", Prime.isPrime(2143))
+        Assert.assertTrue("2143 prime", PrimeV1.isPrime(2143))
     }
 
     @Test

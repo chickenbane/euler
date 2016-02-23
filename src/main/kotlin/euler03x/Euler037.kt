@@ -1,7 +1,7 @@
 package euler03x
 
 import common.Numbers
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -35,7 +35,7 @@ NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
             nums.add(Numbers.intArray2int(r2l))
         }
         //println("my nums = $nums")
-        return nums.all { Prime.isPrime(it) }
+        return nums.all { PrimeV1.isPrime(it) }
     }
 
     // there are 11

@@ -1,7 +1,7 @@
 package euler02x
 
 
-import common.Prime
+import common.PrimeV1
 import org.junit.Assert
 import org.junit.Test
 
@@ -13,17 +13,17 @@ class Euler021Test {
     fun checkDemo() {
         // the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110;
         val expected220 = setOf(1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110)
-        val actual220 = Prime.properDivisors(220)
+        val actual220 = PrimeV1.properDivisors(220)
         Assert.assertEquals("Prime.properDivisors(220) == setOf(1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110)", expected220, actual220)
 
         // properDivisors(28) == setOf(1, 2, 4, 7, 14)
         val expected28 = setOf(1, 2, 4, 7, 14)
-        val actual28 = Prime.properDivisors(28)
+        val actual28 = PrimeV1.properDivisors(28)
         Assert.assertEquals("Prime.properDivisors(28) == setOf(1, 2, 4, 7, 14)", expected28, actual28)
 
         // The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220
         val expected284 = setOf(1, 2, 4, 71, 142)
-        val actual284 = Prime.properDivisors(284)
+        val actual284 = PrimeV1.properDivisors(284)
         Assert.assertEquals("Prime.properDivisors(284) == setOf(1, 2, 4, 71, 142)", expected284, actual284)
     }
 

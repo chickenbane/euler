@@ -1,6 +1,6 @@
 package euler02x
 
-import common.Prime
+import common.PrimeV1
 
 /**
  * Created by joeyt on 2/7/16.
@@ -34,7 +34,7 @@ Find the product of the coefficients, a and b, for the quadratic expression that
         var n = 0
         do {
             val result = f(n)
-            val prime = Prime.isPrime(result)
+            val prime = PrimeV1.isPrime(result)
             n += 1
         } while (prime)
         return n - 1

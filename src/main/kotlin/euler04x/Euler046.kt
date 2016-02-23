@@ -1,6 +1,6 @@
 package euler04x
 
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -32,7 +32,7 @@ What is the smallest odd composite that cannot be written as the sum of a prime 
         val primes = LinkedHashSet<Int>()
         var curr = 2
         while (true) {
-            if (Prime.isPrime(curr)) {
+            if (PrimeV1.isPrime(curr)) {
                 primes.add(curr)
             } else if (curr % 2 != 0) {  // odd composite number
                 if (!goldbach(primes, curr)) {

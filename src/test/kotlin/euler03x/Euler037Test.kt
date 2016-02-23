@@ -1,7 +1,7 @@
 package euler03x
 
 
-import common.Prime
+import common.PrimeV1
 import org.junit.Assert
 import org.junit.Test
 
@@ -14,9 +14,9 @@ class Euler037Test {
         //3797
         Assert.assertTrue("3797 is truncatable", Euler037.isTruncatablePrime(3797))
 
-        Assert.assertTrue("2 prime", Prime.isPrime(2))
-        Assert.assertTrue("3 prime", Prime.isPrime(3))
-        Assert.assertTrue("23 prime", Prime.isPrime(23))
+        Assert.assertTrue("2 prime", PrimeV1.isPrime(2))
+        Assert.assertTrue("3 prime", PrimeV1.isPrime(3))
+        Assert.assertTrue("23 prime", PrimeV1.isPrime(23))
         Assert.assertTrue("23 truncatable", Euler037.isTruncatablePrime(23))
 
     }

@@ -1,7 +1,7 @@
 package euler01x
 
 
-import common.Prime
+import common.PrimeV1
 import org.junit.Assert
 import org.junit.Test
 
@@ -53,7 +53,7 @@ class Euler012Test {
     @Test
     fun testDivisors() {
         val expected = setOf(1, 2, 4, 7, 14, 28)
-        val actual = Prime.divisors(28)
+        val actual = PrimeV1.divisors(28)
         Assert.assertEquals("divisors of 28 = setOf(1,2,4,7,14,28)", expected, actual)
     }
 

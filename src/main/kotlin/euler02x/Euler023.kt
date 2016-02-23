@@ -1,6 +1,6 @@
 package euler02x
 
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -31,7 +31,7 @@ write fun calcPerfectNumberType(x: Int): PerfectNumberType
 
 """
 
-    fun sumProperDivisors(x: Int): Int = Prime.properDivisors(x).sum()
+    fun sumProperDivisors(x: Int): Int = PrimeV1.properDivisors(x).sum()
 
     fun calcPerfectNumberType(n: Int): PerfectNumberType = sumProperDivisors(n).run {
             // this == sum

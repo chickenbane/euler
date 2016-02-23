@@ -1,6 +1,6 @@
 package euler03x
 
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -24,8 +24,8 @@ If the product of these four fractions is given in its lowest common terms, find
 """
 
     data class Rational(val num: Int, val den: Int) {
-        val numFactors = if (num == 0) emptyList() else Prime.factorize(num)
-        val denFactors = if (den == 0) emptyList() else Prime.factorize(den)
+        val numFactors = if (num == 0) emptyList() else PrimeV1.factorize(num)
+        val denFactors = if (den == 0) emptyList() else PrimeV1.factorize(den)
 
         val reducible = numFactors.any { it in denFactors }
 

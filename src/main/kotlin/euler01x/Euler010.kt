@@ -1,6 +1,6 @@
 package euler01x
 
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -25,7 +25,7 @@ Find the sum of all the primes below two million.
         val primes = ArrayList<Int>(n)
         var i = 2
         while (primes.size < n) {
-            val factors = Prime.reduce(i)
+            val factors = PrimeV1.reduce(i)
             if (factors.isPrimeFactor()) {
                 primes.add(factors.getPrime())
             }
@@ -41,7 +41,7 @@ Find the sum of all the primes below two million.
         val primes = ArrayList<Int>()
         var i = 2
         while (i < lessThan) {
-            val factors = Prime.reduce(i)
+            val factors = PrimeV1.reduce(i)
             if (factors.isPrimeFactor()) {
                 primes.add(factors.getPrime())
             }

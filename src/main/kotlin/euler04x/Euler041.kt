@@ -1,7 +1,7 @@
 package euler04x
 
 import common.Numbers
-import common.Prime
+import common.PrimeV1
 import java.util.*
 
 /**
@@ -33,7 +33,7 @@ What is the largest n-digit pandigital prime that exists?
 
     fun answerBrute(): Int {
         for (i in 987654321.downTo(2143)) {
-            if (Prime.isPrime(i) && Numbers.isPandigital(i.toString())) {
+            if (PrimeV1.isPrime(i) && Numbers.isPandigital(i.toString())) {
                 return i
             }
         }
@@ -45,7 +45,7 @@ What is the largest n-digit pandigital prime that exists?
         val array = (1..n).toList().toIntArray()
         do {
             val num = Numbers.intArray2int(array)
-            if (Prime.isPrime(num)) {
+            if (PrimeV1.isPrime(num)) {
                 set.add(num)
             }
             val again = Numbers.nextLexPermutation(array)

@@ -1,7 +1,7 @@
 package euler02x
 
 
-import common.Prime
+import common.PrimeV1
 import org.junit.Assert
 import org.junit.Test
 
@@ -11,10 +11,10 @@ import org.junit.Test
 class Euler027Test {
     @Test
     fun checkIsPrime() {
-        Assert.assertFalse("1 is not prime", Prime.isPrime(1))
-        Assert.assertTrue("2 is prime", Prime.isPrime(2))
-        Assert.assertTrue("3 is prime", Prime.isPrime(3))
-        Assert.assertFalse("4 is not prime", Prime.isPrime(4))
+        Assert.assertFalse("1 is not prime", PrimeV1.isPrime(1))
+        Assert.assertTrue("2 is prime", PrimeV1.isPrime(2))
+        Assert.assertTrue("3 is prime", PrimeV1.isPrime(3))
+        Assert.assertFalse("4 is not prime", PrimeV1.isPrime(4))
     }
 
     @Test
