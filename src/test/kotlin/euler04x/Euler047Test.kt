@@ -38,6 +38,7 @@ class Euler047Test {
         Assert.assertEquals("first prime is 2", Prime.TWO, Prime.FIRST_PRIMES.first())
         val stop = System.currentTimeMillis()
         println("time to load FIRST_PRIMES = ${stop-start}ms")
+        Assert.assertEquals("last prime is 999983", Prime.of(999983), Prime.FIRST_PRIMES.last())
     }
 
 
