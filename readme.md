@@ -46,4 +46,8 @@
 
 39 object subclass override contains
 
+47 rewrote Prime let private constuctor companion factory
+
+48 substring(IntRange)
+
 67 wanted to read the file by name in classpath, this was the easiest way
